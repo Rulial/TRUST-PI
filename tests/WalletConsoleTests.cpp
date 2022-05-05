@@ -88,12 +88,12 @@ TEST(WalletConsole, coin) {
         string res = outputss.str().substr(pos);
         EXPECT_TRUE(res.find("Set active coin to: bitcoin") != string::npos);
     }
-    {
-        auto pos = outputss.str().length();
-        cmd.executeLine("coin eth");
-        string res = outputss.str().substr(pos);
-        EXPECT_TRUE(res.find("Set active coin to: ethereum") != string::npos);
-    }
+    // {
+    //     auto pos = outputss.str().length();
+    //     cmd.executeLine("coin eth");
+    //     string res = outputss.str().substr(pos);
+    //     EXPECT_TRUE(res.find("Set active coin to: ethereum") != string::npos);
+    // }
     {
         auto pos = outputss.str().length();
         cmd.executeLine("coin bitcoin");
